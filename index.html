@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="k5iNL6xAl3GVxnukbS8nIL75iHvoL1TONv9AtTfw">
     <meta name="keywords" content="Ranker">
     <meta name="description" content="Ranker">
-    <link rel="canonical" href="https://demo.karamelscript.name.ng/rankhyip/user/transactions"/>
+    <link rel="canonical" href="https://demo.karamelscript.name.ng/rankhyip/user/deposit"/>
     <link rel="shortcut icon" href="https://demo.karamelscript.name.ng/rankhyip/assets/global/images/1Znf8h9Yj47Ely0Ps8lz.png" type="image/x-icon"/>
     <link rel="icon" href="https://demo.karamelscript.name.ng/rankhyip/assets/global/images/1Znf8h9Yj47Ely0Ps8lz.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://demo.karamelscript.name.ng/rankhyip/assets/global/css/simple-notify.min.css"/>
@@ -29,8 +29,7 @@
 }
     </style>
 
-    <title>Ranker - Transactions
-</title>
+    <title>Ranker - Deposit</title>
 </head>
 
 <body class="dark-theme rock-dashboard-bg">
@@ -80,8 +79,7 @@
                         </span>
                     </button>
                     <div class="current-status">
-                        <h4 class="title">Transactions
-</h4>
+                        <h4 class="title">Deposit</h4>
                     </div>
                 </div>
             </div>
@@ -477,7 +475,7 @@ Robotics
                                 <span>Schema Logs</span>
                             </a>
                         </li>
-                        <li class="active">
+                        <li class="">
                             <a href="https://demo.karamelscript.name.ng/rankhyip/user/transactions">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -496,7 +494,7 @@ Robotics
                                 </svg>
                                 <span>All Transactions</span></a>
                         </li>
-                        <li class="  ">
+                        <li class=" active ">
                             <a href="https://demo.karamelscript.name.ng/rankhyip/user/deposit">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -741,613 +739,107 @@ Robotics
                                         <div class="col-xxl-12">
     <!-- Show desktop-screen content -->
     <!-- Show mobile-screen content -->
-    </div>                        
-<div class="container-fluid default-page">
+    </div>                        <div class="container-fluid default-page">
     <div class="row gy-30">
-        <div class="col-xl-12">
-            <div class="rock-all-transactions-area">
+        <div class="col-xxl-12">
+            <div class="rock-add-money-area">
                 <div class="rock-dashboard-card">
-                    <div class="support-ticket-form">
-                        <form action="https://demo.karamelscript.name.ng/rankhyip/user/transactions">
-                            <div class="common-table-form-grid">
-                                <div class="input-field">
-                                    <input type="text" class="box-input" name="query" value="" placeholder="Search here...">
-                                    <div class="input-icon">
-                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.9697 17.4697C17.2626 17.1768 17.7374 17.1768 18.0303 17.4697L22.5303 21.9697C22.8232 22.2626 22.8232 22.7374 22.5303 23.0303C22.2374 23.3232 21.7626 23.3232 21.4697 23.0303L16.9697 18.5303C16.6768 18.2374 16.6768 17.7626 16.9697 17.4697Z"
-                                                fill="white" />
-                                            <circle cx="9.5" cy="9.5" r="9.5" transform="matrix(1 0 0 -1 2 21.5)"
-                                                fill="white" />
-                                        </svg>
+                    <div class="rock-dashboard-title-inner">
+                        <div class="content">
+                            <h3 class="rock-dashboard-tile">Deposit Amount</h3>
+                            <p class="description">Enter your deposit details</p>
+                        </div>
+                        <a class="site-btn gradient-btn radius-12" href="https://demo.karamelscript.name.ng/rankhyip/user/deposit/log">Deposit History</a>
+                    </div>
+                    <div class="rock-add-mony-wrapper">
+                        <form action="https://demo.karamelscript.name.ng/rankhyip/user/deposit/now" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="k5iNL6xAl3GVxnukbS8nIL75iHvoL1TONv9AtTfw">                            <div class="row gy-30">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 ">
+                                    <div class="rock-single-input">
+                                        <label class="input-label" for="">Payment Method</label>
+                                        <div class="input-select">
+                                            <select name="gateway_code" id="gatewaySelect" class="site-nice-select">
+                                                <option selected disabled>--Select Gateway--</option>
+                                                                                                <option value="USDT TRC20">USDT Deposit</option>
+                                                                                                <option value="nowpayments-btc">NowPayment</option>
+                                                                                            </select>
+                                        </div>
+                                        <p class="input-description charge"></p>
+                                    </div>
+                                    <div class="rock-single-input">
+                                        <label class="input-label" for="">Enter Amount:</label>
+                                        <div class="input-field">
+                                            <input type="text" class="box-input" name="amount" id="amount" oninput="this.value = validateDouble(this.value)" aria-label="Amount">
+                                            <span class="input-icon">
+                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.4"
+                                                        d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                                                        fill="white" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12 6.25C12.4142 6.25 12.75 6.58579 12.75 7V7.85352C13.9043 8.17998 14.75 9.24122 14.75 10.5C14.75 10.9142 14.4142 11.25 14 11.25C13.5858 11.25 13.25 10.9142 13.25 10.5C13.25 9.80964 12.6904 9.25 12 9.25C11.3096 9.25 10.75 9.80964 10.75 10.5C10.75 11.1904 11.3096 11.75 12 11.75C13.5188 11.75 14.75 12.9812 14.75 14.5C14.75 15.7588 13.9043 16.82 12.75 17.1465V18C12.75 18.4142 12.4142 18.75 12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V17.1465C10.0957 16.82 9.25 15.7588 9.25 14.5C9.25 14.0858 9.58579 13.75 10 13.75C10.4142 13.75 10.75 14.0858 10.75 14.5C10.75 15.1904 11.3096 15.75 12 15.75C12.6904 15.75 13.25 15.1904 13.25 14.5C13.25 13.8096 12.6904 13.25 12 13.25C10.4812 13.25 9.25 12.0188 9.25 10.5C9.25 9.24122 10.0957 8.17998 11.25 7.85352V7C11.25 6.58579 11.5858 6.25 12 6.25Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <p class="input-description min-max"></p>
+                                    </div>
+
+                                    <div class="row manual-row"></div>
+                                </div>
+
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 ">
+                                    <div class="rock-add-mony-details">
+                                        <h4 class="title">Review Details</h4>
+                                        <div class="rock-add-mony-list">
+                                            <ul>
+                                                <li>
+                                                    <span class="title">Amount</span>
+                                                    <span class="info"><span class="amount"></span> <span class="currency"></span></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Charge</span>
+                                                    <span class="info charge2"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Payment Method</span>
+                                                    <span class="tumb" id="logo">
+                                                        <img src="" class="payment-method">
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Total</span>
+                                                    <span class="title total"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Conversion Rate</span>
+                                                    <span class="info conversion-rate"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Pay Amount</span>
+                                                    <span class="info pay-amount"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="input-field">
-                                    <input type="text" id="d_today" name="date" placeholder="dd/mm/yyyy" name="" value="">
-                                    <div class="input-icon">
-                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+
+                                <div class="rock-input-btn-wrap justify-content-end">
+                                    <button type="submit" class="site-btn gradient-btn radius-10">
+                                        Proceed to Payment
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4"
-                                                d="M3 8C3 5.79086 4.79086 4 7 4H17C19.2091 4 21 5.79086 21 8V9.5V18.5C21 20.7091 19.2091 22.5 17 22.5H7C4.79086 22.5 3 20.7091 3 18.5V9.5V8Z"
+                                                d="M19 13C19 17.4183 15.4183 21 11 21C6.58172 21 3 17.4183 3 13C3 8.58172 6.58172 5 11 5C15.4183 5 19 8.58172 19 13Z"
                                                 fill="white" />
-                                            <path
-                                                d="M17 4H7C4.79086 4 3 5.79086 3 8V9.5H21V8C21 5.79086 19.2091 4 17 4Z"
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16 3.75C15.5858 3.75 15.25 3.41421 15.25 3C15.25 2.58579 15.5858 2.25 16 2.25H21C21.4142 2.25 21.75 2.58579 21.75 3V8C21.75 8.41421 21.4142 8.75 21 8.75C20.5858 8.75 20.25 8.41421 20.25 8V4.81066L10.5303 14.5303C10.2374 14.8232 9.76256 14.8232 9.46967 14.5303C9.17678 14.2374 9.17678 13.7626 9.46967 13.4697L19.1893 3.75H16Z"
                                                 fill="white" />
-                                            <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8 1.75C8.41421 1.75 8.75 2.08579 8.75 2.5V5.5C8.75 5.91421 8.41421 6.25 8 6.25C7.58579 6.25 7.25 5.91421 7.25 5.5V2.5C7.25 2.08579 7.58579 1.75 8 1.75ZM16 1.75C16.4142 1.75 16.75 2.08579 16.75 2.5V5.5C16.75 5.91421 16.4142 6.25 16 6.25C15.5858 6.25 15.25 5.91421 15.25 5.5V2.5C15.25 2.08579 15.5858 1.75 16 1.75Z"
-                                                fill="white" />
-                                            <circle cx="12" cy="15.5" r="1" fill="white" />
-                                            <circle cx="16" cy="15.5" r="1" fill="white" />
-                                            <circle cx="8" cy="15.5" r="1" fill="white" />
                                         </svg>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="rock-single-input">
-                                    <div class="input-select">
-                                                                                <select name="type">
-                                            <option value="">All Types</option>
-                                                                                        <option value="deposit" >Deposit</option>
-                                                                                        <option value="subtract" >Subtract</option>
-                                                                                        <option value="manual_deposit" >ManualDeposit</option>
-                                                                                        <option value="send_money" >SendMoney</option>
-                                                                                        <option value="exchange" >Exchange</option>
-                                                                                        <option value="referral" >Referral</option>
-                                                                                        <option value="signup_bonus" >SignupBonus</option>
-                                                                                        <option value="bonus" >Bonus</option>
-                                                                                        <option value="withdraw" >Withdraw</option>
-                                                                                        <option value="withdraw_auto" >WithdrawAuto</option>
-                                                                                        <option value="receive_money" >ReceiveMoney</option>
-                                                                                        <option value="investment" >Investment</option>
-                                                                                        <option value="interest" >Interest</option>
-                                                                                        <option value="refund" >Refund</option>
-                                                                                        <option value="reward_redeem" >RewardRedeem</option>
-                                                                                        <option value="portfolio_bonus" >PortfolioBonus</option>
-                                                                                    </select>
-                                      </div>
-                                </div>
-
-                                <button class="site-btn gradient-btn" type="submit">
-                                    <i class="icon-search-normal"></i> Search
-                                </button>
                             </div>
                         </form>
-                    </div>
-                    <div class="rock-recent-transactions-table">
-                        <div class="rock-custom-table">
-                            <div class="contents">
-                                <div class="site-table-list site-table-head">
-                                    <div class="site-table-col">Description</div>
-                                    <div class="site-table-col">Transaction ID</div>
-                                    <div class="site-table-col">Type</div>
-                                    <div class="site-table-col">Amount</div>
-                                    <div class="site-table-col">Charge</div>
-                                    <div class="site-table-col">Status</div>
-                                    <div class="site-table-col">Gateway</div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M4 8H2V17L6.31083 19.1554C7.42168 19.7108 8.64658 20 9.88854 20H18C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16H16.4164C15.4849 16 14.5663 15.7831 13.7331 15.3666L10.792 13.896C10.9843 13.7189 11.1432 13.4993 11.2528 13.2434C11.6664 12.2784 11.2241 11.1605 10.2622 10.7397L4 8Z" fill="#80ED99"></path>
-                                  <circle cx="18" cy="8" r="4" fill="#80ED99"></circle>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Deposit With USDT Deposit
-                                                </h4>
-                                                <p class="description">Feb 10 2026 05:05</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXELO22G78HS</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Manual Deposit</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 5000 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">50  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge warning" class="rock-badge badge-success">
-                                            Pending
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT TRC20</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#FFD6FF"></path>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.75C12.4142 5.75 12.75 6.08579 12.75 6.5V7.35352C13.9043 7.67998 14.75 8.74122 14.75 10C14.75 10.4142 14.4142 10.75 14 10.75C13.5858 10.75 13.25 10.4142 13.25 10C13.25 9.30964 12.6904 8.75 12 8.75C11.3096 8.75 10.75 9.30964 10.75 10C10.75 10.6904 11.3096 11.25 12 11.25C13.5188 11.25 14.75 12.4812 14.75 14C14.75 15.2588 13.9043 16.32 12.75 16.6465V17.5C12.75 17.9142 12.4142 18.25 12 18.25C11.5858 18.25 11.25 17.9142 11.25 17.5V16.6465C10.0957 16.32 9.25 15.2588 9.25 14C9.25 13.5858 9.58579 13.25 10 13.25C10.4142 13.25 10.75 13.5858 10.75 14C10.75 14.6904 11.3096 15.25 12 15.25C12.6904 15.25 13.25 14.6904 13.25 14C13.25 13.3096 12.6904 12.75 12 12.75C10.4812 12.75 9.25 11.5188 9.25 10C9.25 8.74122 10.0957 7.67998 11.25 7.35352V6.5C11.25 6.08579 11.5858 5.75 12 5.75Z" fill="#FFD6FF"></path>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title kissable-text">
-                                                   Space X Invested
-                                                </h4>
-                                                <p class="description">Feb 09 2026 03:59</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRX3Y5AN3ON6N</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Investment</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="danger-text">
-                                            - 900 USD
-
-                                                                                        <svg width="8" height="12" viewBox="0 0 8 12"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M3.55545 11.4419C3.79953 11.686 4.19526 11.686 4.43934 11.4419L7.77267 8.10861C8.01675 7.86453 8.01675 7.4688 7.77267 7.22472C7.52859 6.98065 7.13286 6.98065 6.88879 7.22472L4.6224 9.49112V1C4.6224 0.654822 4.34257 0.375 3.9974 0.375C3.65222 0.375 3.3724 0.654822 3.3724 1V9.49112L1.106 7.22472C0.861927 6.98065 0.466198 6.98065 0.222121 7.22472C-0.0219569 7.4688 -0.0219569 7.86453 0.222121 8.10861L3.55545 11.4419Z"
-                                                    fill="#FF3E3E" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">9  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge warning" class="rock-badge badge-success">
-                                            Pending
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT Deposit</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M4 8H2V17L6.31083 19.1554C7.42168 19.7108 8.64658 20 9.88854 20H18C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16H16.4164C15.4849 16 14.5663 15.7831 13.7331 15.3666L10.792 13.896C10.9843 13.7189 11.1432 13.4993 11.2528 13.2434C11.6664 12.2784 11.2241 11.1605 10.2622 10.7397L4 8Z" fill="#80ED99"></path>
-                                  <circle cx="18" cy="8" r="4" fill="#80ED99"></circle>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Deposit With USDT Deposit
-                                                </h4>
-                                                <p class="description">Feb 09 2026 03:49</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXK8VTXPSX06</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Manual Deposit</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 5000 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">50  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge warning" class="rock-badge badge-success">
-                                            Pending
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT TRC20</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M4 8H2V17L6.31083 19.1554C7.42168 19.7108 8.64658 20 9.88854 20H18C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16H16.4164C15.4849 16 14.5663 15.7831 13.7331 15.3666L10.792 13.896C10.9843 13.7189 11.1432 13.4993 11.2528 13.2434C11.6664 12.2784 11.2241 11.1605 10.2622 10.7397L4 8Z" fill="#80ED99"></path>
-                                  <circle cx="18" cy="8" r="4" fill="#80ED99"></circle>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Deposit With USDT Deposit
-                                                </h4>
-                                                <p class="description">Feb 09 2026 03:38</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXBDI1KMKGMM</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Manual Deposit</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 5000 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">50  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge badge-success" class="rock-badge badge-success">
-                                            Success
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT TRC20</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#FFD6FF"></path>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.75C12.4142 5.75 12.75 6.08579 12.75 6.5V7.35352C13.9043 7.67998 14.75 8.74122 14.75 10C14.75 10.4142 14.4142 10.75 14 10.75C13.5858 10.75 13.25 10.4142 13.25 10C13.25 9.30964 12.6904 8.75 12 8.75C11.3096 8.75 10.75 9.30964 10.75 10C10.75 10.6904 11.3096 11.25 12 11.25C13.5188 11.25 14.75 12.4812 14.75 14C14.75 15.2588 13.9043 16.32 12.75 16.6465V17.5C12.75 17.9142 12.4142 18.25 12 18.25C11.5858 18.25 11.25 17.9142 11.25 17.5V16.6465C10.0957 16.32 9.25 15.2588 9.25 14C9.25 13.5858 9.58579 13.25 10 13.25C10.4142 13.25 10.75 13.5858 10.75 14C10.75 14.6904 11.3096 15.25 12 15.25C12.6904 15.25 13.25 14.6904 13.25 14C13.25 13.3096 12.6904 12.75 12 12.75C10.4812 12.75 9.25 11.5188 9.25 10C9.25 8.74122 10.0957 7.67998 11.25 7.35352V6.5C11.25 6.08579 11.5858 5.75 12 5.75Z" fill="#FFD6FF"></path>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title kissable-text">
-                                                   Robotics Plan Invested
-                                                </h4>
-                                                <p class="description">Feb 09 2026 03:33</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXH1CSP2PPSA</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Investment</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="danger-text">
-                                            - 100 USD
-
-                                                                                        <svg width="8" height="12" viewBox="0 0 8 12"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M3.55545 11.4419C3.79953 11.686 4.19526 11.686 4.43934 11.4419L7.77267 8.10861C8.01675 7.86453 8.01675 7.4688 7.77267 7.22472C7.52859 6.98065 7.13286 6.98065 6.88879 7.22472L4.6224 9.49112V1C4.6224 0.654822 4.34257 0.375 3.9974 0.375C3.65222 0.375 3.3724 0.654822 3.3724 1V9.49112L1.106 7.22472C0.861927 6.98065 0.466198 6.98065 0.222121 7.22472C-0.0219569 7.4688 -0.0219569 7.86453 0.222121 8.10861L3.55545 11.4419Z"
-                                                    fill="#FF3E3E" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">0  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge badge-success" class="rock-badge badge-success">
-                                            Success
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">System</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#FFD6FF"></path>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.75C12.4142 5.75 12.75 6.08579 12.75 6.5V7.35352C13.9043 7.67998 14.75 8.74122 14.75 10C14.75 10.4142 14.4142 10.75 14 10.75C13.5858 10.75 13.25 10.4142 13.25 10C13.25 9.30964 12.6904 8.75 12 8.75C11.3096 8.75 10.75 9.30964 10.75 10C10.75 10.6904 11.3096 11.25 12 11.25C13.5188 11.25 14.75 12.4812 14.75 14C14.75 15.2588 13.9043 16.32 12.75 16.6465V17.5C12.75 17.9142 12.4142 18.25 12 18.25C11.5858 18.25 11.25 17.9142 11.25 17.5V16.6465C10.0957 16.32 9.25 15.2588 9.25 14C9.25 13.5858 9.58579 13.25 10 13.25C10.4142 13.25 10.75 13.5858 10.75 14C10.75 14.6904 11.3096 15.25 12 15.25C12.6904 15.25 13.25 14.6904 13.25 14C13.25 13.3096 12.6904 12.75 12 12.75C10.4812 12.75 9.25 11.5188 9.25 10C9.25 8.74122 10.0957 7.67998 11.25 7.35352V6.5C11.25 6.08579 11.5858 5.75 12 5.75Z" fill="#FFD6FF"></path>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title kissable-text">
-                                                   Robotics Plan Invested
-                                                </h4>
-                                                <p class="description">Feb 09 2026 03:33</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXUPLF7JW2SY</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Investment</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="danger-text">
-                                            - 100 USD
-
-                                                                                        <svg width="8" height="12" viewBox="0 0 8 12"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M3.55545 11.4419C3.79953 11.686 4.19526 11.686 4.43934 11.4419L7.77267 8.10861C8.01675 7.86453 8.01675 7.4688 7.77267 7.22472C7.52859 6.98065 7.13286 6.98065 6.88879 7.22472L4.6224 9.49112V1C4.6224 0.654822 4.34257 0.375 3.9974 0.375C3.65222 0.375 3.3724 0.654822 3.3724 1V9.49112L1.106 7.22472C0.861927 6.98065 0.466198 6.98065 0.222121 7.22472C-0.0219569 7.4688 -0.0219569 7.86453 0.222121 8.10861L3.55545 11.4419Z"
-                                                    fill="#FF3E3E" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">0  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge badge-success" class="rock-badge badge-success">
-                                            Success
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">System</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M4 8H2V17L6.31083 19.1554C7.42168 19.7108 8.64658 20 9.88854 20H18C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16H16.4164C15.4849 16 14.5663 15.7831 13.7331 15.3666L10.792 13.896C10.9843 13.7189 11.1432 13.4993 11.2528 13.2434C11.6664 12.2784 11.2241 11.1605 10.2622 10.7397L4 8Z" fill="#80ED99"></path>
-                                  <circle cx="18" cy="8" r="4" fill="#80ED99"></circle>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Deposit With USDT Deposit
-                                                </h4>
-                                                <p class="description">Oct 16 2024 09:20</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXSH8CQUXLTD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Manual Deposit</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 500 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">5  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge warning" class="rock-badge badge-success">
-                                            Pending
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT TRC20</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.4" d="M2 4C2 2.89543 2.89543 2 4 2H12C13.1046 2 14 2.89543 14 4V8C14 9.10457 13.1046 10 12 10H4C2.89543 10 2 9.10457 2 8V4Z" fill="#FF8F77"></path>
-                                <path opacity="0.4" d="M10 16C10 14.8954 10.8954 14 12 14H20C21.1046 14 22 14.8954 22 16V20C22 21.1046 21.1046 22 20 22H12C10.8954 22 10 21.1046 10 20V16Z" fill="#FF8F77"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6036 6.75L19.8839 7.46967C19.591 7.76256 19.591 8.23744 19.8839 8.53033C20.1768 8.82322 20.6517 8.82322 20.9445 8.53033L22.2374 7.23744C22.9209 6.55402 22.9209 5.44598 22.2374 4.76256L20.9445 3.46967C20.6517 3.17678 20.1768 3.17678 19.8839 3.46967C19.591 3.76256 19.591 4.23744 19.8839 4.53033L20.6036 5.25L16 5.25C15.5858 5.25 15.25 5.58579 15.25 6C15.25 6.41421 15.5858 6.75 16 6.75L20.6036 6.75Z" fill="#FF8F77"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.39645 18.75L4.11612 19.4697C4.40901 19.7626 4.40901 20.2374 4.11612 20.5303C3.82322 20.8232 3.34835 20.8232 3.05546 20.5303L1.76256 19.2374C1.07915 18.554 1.07914 17.446 1.76256 16.7626L3.05546 15.4697C3.34835 15.1768 3.82322 15.1768 4.11612 15.4697C4.40901 15.7626 4.40901 16.2374 4.11612 16.5303L3.39645 17.25L8 17.25C8.41421 17.25 8.75 17.5858 8.75 18C8.75 18.4142 8.41421 18.75 8 18.75L3.39645 18.75Z" fill="#FF8F77"></path>
-                            </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Main to Profit Wallet Exchanged
-                                                </h4>
-                                                <p class="description">Oct 16 2024 08:41</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXBPARJCUECI</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Exchange</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 672 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">0.336  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge badge-success" class="rock-badge badge-success">
-                                            Success
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">System</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M4 8H2V17L6.31083 19.1554C7.42168 19.7108 8.64658 20 9.88854 20H18C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16H16.4164C15.4849 16 14.5663 15.7831 13.7331 15.3666L10.792 13.896C10.9843 13.7189 11.1432 13.4993 11.2528 13.2434C11.6664 12.2784 11.2241 11.1605 10.2622 10.7397L4 8Z" fill="#80ED99"></path>
-                                  <circle cx="18" cy="8" r="4" fill="#80ED99"></circle>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Deposit With USDT Deposit
-                                                </h4>
-                                                <p class="description">Oct 16 2024 08:40</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXGI4FIWVFX5</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Manual Deposit</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 400 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">4  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge warning" class="rock-badge badge-success">
-                                            Pending
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">USDT TRC20</span>
-                                    </div>
-                                </div>
-                                                                <div class="site-table-list">
-                                    <div class="site-table-col">
-                                        <div class="transactions-description">
-                                            <div class="iocn">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path opacity="0.4" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#FFD6FF"></path>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.75C12.4142 5.75 12.75 6.08579 12.75 6.5V7.35352C13.9043 7.67998 14.75 8.74122 14.75 10C14.75 10.4142 14.4142 10.75 14 10.75C13.5858 10.75 13.25 10.4142 13.25 10C13.25 9.30964 12.6904 8.75 12 8.75C11.3096 8.75 10.75 9.30964 10.75 10C10.75 10.6904 11.3096 11.25 12 11.25C13.5188 11.25 14.75 12.4812 14.75 14C14.75 15.2588 13.9043 16.32 12.75 16.6465V17.5C12.75 17.9142 12.4142 18.25 12 18.25C11.5858 18.25 11.25 17.9142 11.25 17.5V16.6465C10.0957 16.32 9.25 15.2588 9.25 14C9.25 13.5858 9.58579 13.25 10 13.25C10.4142 13.25 10.75 13.5858 10.75 14C10.75 14.6904 11.3096 15.25 12 15.25C12.6904 15.25 13.25 14.6904 13.25 14C13.25 13.3096 12.6904 12.75 12 12.75C10.4812 12.75 9.25 11.5188 9.25 10C9.25 8.74122 10.0957 7.67998 11.25 7.35352V6.5C11.25 6.08579 11.5858 5.75 12 5.75Z" fill="#FFD6FF"></path>
-                                </svg>
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title green-text">
-                                                   Transfer Money Form PromisePromise7955
-                                                </h4>
-                                                <p class="description">Oct 16 2024 12:06</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">TRXI8CYEEYKDL</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="kittensEye-text">Receive Money</span>
-                                    </div>
-                                                                        <div class="site-table-col">
-                                        <span class="success-text">
-                                            + 2000 USD
-
-                                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M9.55545 4.55806C9.79953 4.31398 10.1953 4.31398 10.4393 4.55806L13.7727 7.89139C14.0167 8.13547 14.0167 8.5312 13.7727 8.77528C13.5286 9.01935 13.1329 9.01935 12.8888 8.77528L10.6224 6.50888V15C10.6224 15.3452 10.3426 15.625 9.9974 15.625C9.65222 15.625 9.3724 15.3452 9.3724 15V6.50888L7.106 8.77528C6.86193 9.01935 6.4662 9.01935 6.22212 8.77528C5.97804 8.5312 5.97804 8.13547 6.22212 7.89139L9.55545 4.55806Z"
-                                                    fill="#85FFC4" />
-                                            </svg>
-                                                                                    </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">100  USD</span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="rock-badge badge-success" class="rock-badge badge-success">
-                                            Success
-                                        </span>
-                                    </div>
-                                    <div class="site-table-col">
-                                        <span class="white-text">System</span>
-                                    </div>
-                                </div>
-                                                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination-wrapper">
-                        <div class="rock-pagination d-flex justify-content-end">
-                            <div class="pagination-wrapper">
-    <div class="rock-pagination d-flex justify-content-end">
-                    <nav>
-                <ul>
-
-                                            <li>
-                            <span>
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4"
-                                          d="M22.5 12.5C22.5 18.0228 18.0228 22.5 12.5 22.5C6.97715 22.5 2.5 18.0228 2.5 12.5C2.5 6.97715 6.97715 2.5 12.5 2.5C18.0228 2.5 22.5 6.97715 22.5 12.5Z"
-                                          fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697L10.9697 8.96967C11.2626 8.67678 11.7374 8.67678 12.0303 8.96967C12.3232 9.26256 12.3232 9.73744 12.0303 10.0303L10.3107 11.75L16.5 11.75C16.9142 11.75 17.25 12.0858 17.25 12.5C17.25 12.9142 16.9142 13.25 16.5 13.25L10.3107 13.25L12.0303 14.9697C12.3232 15.2626 12.3232 15.7374 12.0303 16.0303C11.7374 16.3232 11.2626 16.3232 10.9697 16.0303L7.96967 13.0303Z"
-                                          fill="white" />
-                                </svg>
-                            </span>
-                        </li>
-                    
-
-                    
-                        
-
-                                                                                                                        <li class="current"><span>1</span>
-                                    </li>
-                                                                                                                                <li><a href="https://demo.karamelscript.name.ng/rankhyip/user/transactions?page=2">2</a></li>
-                                                                                                        
-
-                                            <li>
-                            <a href="https://demo.karamelscript.name.ng/rankhyip/user/transactions?page=2" rel="next">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4"
-                                          d="M2.5 12.5C2.5 18.0228 6.97715 22.5 12.5 22.5C18.0228 22.5 22.5 18.0228 22.5 12.5C22.5 6.97715 18.0228 2.5 12.5 2.5C6.97715 2.5 2.5 6.97715 2.5 12.5Z"
-                                          fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M17.0303 13.0303C17.3232 12.7374 17.3232 12.2626 17.0303 11.9697L14.0303 8.96967C13.7374 8.67678 13.2626 8.67678 12.9697 8.96967C12.6768 9.26256 12.6768 9.73744 12.9697 10.0303L14.6893 11.75L8.5 11.75C8.08579 11.75 7.75 12.0858 7.75 12.5C7.75 12.9142 8.08579 13.25 8.5 13.25L14.6893 13.25L12.9697 14.9697C12.6768 15.2626 12.6768 15.7374 12.9697 16.0303C13.2626 16.3232 13.7374 16.3232 14.0303 16.0303L17.0303 13.0303Z"
-                                          fill="white" />
-                                </svg>
-                            </a>
-                        </li>
-                                    </ul>
-            </nav>
-        
-    </div>
-</div>
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1432,7 +924,7 @@ Robotics
                     <span class="text">Home</span>
                 </a>
             </li>
-            <li >
+            <li  class="active" >
                 <a href="https://demo.karamelscript.name.ng/rankhyip/user/deposit">
                         <span class="icon"><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" d="M28 15C28 21.9036 22.4036 27.5 15.5 27.5C8.59644 27.5 3 21.9036 3 15C3 8.09644 8.59644 2.5 15.5 2.5C22.4036 2.5 28 8.09644 28 15Z" fill="white" />
@@ -1555,6 +1047,123 @@ Robotics
 </script>
 
 <script type="text/javascript" src="https://demo.karamelscript.name.ng/rankhyip/assets/vendor/mckenziearts/laravel-notify/js/notify.js"></script>
+<script>
+    var globalData;
+    var currency = "USD"
+    $("#gatewaySelect").on('change', function (e) {
+        "use strict"
+        e.preventDefault();
+        $('.manual-row').empty();
+        var code = $(this).val()
+        var url = 'https://demo.karamelscript.name.ng/rankhyip/user/deposit/gateway/:code';
+        url = url.replace(':code', code);
+        $.get(url, function (data) {
+
+            globalData = data;
+            $('.charge').text('Charge ' + data.charge + ' ' + (data.charge_type === 'percentage' ?
+                ' % ' : currency))
+            $('.conversion-rate').text('1' + ' ' + currency + ' = ' + data.rate + ' ' + data.currency)
+
+
+            $('.min-max').text('Minimum ' + data.minimum_deposit + ' ' + currency + ' and ' +
+                'Maximum ' + data.maximum_deposit + ' ' + currency)
+            $('#logo').html(`<img class="payment-method" src='${data.gateway_logo}'>`);
+            var amount = $('#amount').val()
+
+            if (Number(amount) > 0) {
+                $('.amount').text((Number(amount)))
+                var charge = data.charge_type === 'percentage' ? calPercentage(amount, data.charge) :
+                    data.charge
+                $('.charge2').text(charge + ' ' + currency)
+                $('.total').text((Number(amount) + Number(charge)) + ' ' + currency)
+            }
+
+            if (data.credentials !== undefined) {
+                $('.manual-row').append(data.credentials)
+                imagePreview()
+            }
+
+        });
+
+        $('#amount').on('keyup', function (e) {
+            "use strict"
+            var amount = $(this).val()
+            $('.amount').text((Number(amount)))
+            $('.currency').text(currency)
+
+            var charge = globalData.charge_type === 'percentage' ? calPercentage(amount, globalData
+                .charge) : globalData.charge
+            $('.charge2').text(charge + ' ' + currency)
+
+            var total = (Number(amount) + Number(charge));
+
+            $('.total').text(total + ' ' + currency)
+
+            $('.pay-amount').text(total * globalData.rate + ' ' + globalData.currency)
+        })
+
+
+    });
+    function showCloseButton(event) {
+      const button = event.target.parentElement.nextElementSibling;
+      button.style.display = 'block';
+    }
+
+    function removeUploadedFile(button) {
+        const label = button.previousElementSibling.querySelector('label.file-ok');
+        const input = button.previousElementSibling.querySelector('input[type="file"]');
+        label.classList.remove('file-ok');
+        label.removeAttribute('style');
+        label.innerHTML = `
+                <span class="upload-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_i_2427_12057)">
+                    <path d="M14 18L34 18C38.4183 18 42 21.5817 42 26V34C42 38.4183 38.4183 42 34 42H14C9.58172 42 6 38.4183 6 34L6 26C6 21.5817 9.58172 18 14 18Z" fill="url(#paint0_linear_2427_12057)"/>
+                    </g>
+                    <path d="M14 18.5L34 18.5C38.1421 18.5 41.5 21.8579 41.5 26V34C41.5 38.1421 38.1421 41.5 34 41.5H14C9.85787 41.5 6.5 38.1421 6.5 34L6.5 26C6.5 21.8579 9.85786 18.5 14 18.5Z" stroke="white" stroke-opacity="0.08"/>
+                    <g filter="url(#filter1_i_2427_12057)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9393 13.0607C16.3536 12.4749 16.3536 11.5251 16.9393 10.9393L22.9393 4.93934C23.5251 4.35355 24.4749 4.35355 25.0607 4.93934L31.0607 10.9393C31.6464 11.5251 31.6464 12.4749 31.0607 13.0607C30.4749 13.6464 29.5251 13.6464 28.9393 13.0607C27.6701 11.7915 25.5 12.6904 25.5 14.4853L25.5 30C25.5 30.8284 24.8284 31.5 24 31.5C23.1716 31.5 22.5 30.8284 22.5 30L22.5 14.4853C22.5 12.6904 20.3299 11.7915 19.0607 13.0607C18.4749 13.6464 17.5251 13.6464 16.9393 13.0607Z" fill="url(#paint1_linear_2427_12057)"/>
+                    </g>
+                    <path d="M17.2929 12.7071C16.9024 12.3166 16.9024 11.6834 17.2929 11.2929L23.2929 5.29289C23.6834 4.90237 24.3166 4.90237 24.7071 5.29289L30.7071 11.2929C31.0976 11.6834 31.0976 12.3166 30.7071 12.7071C30.3166 13.0976 29.6834 13.0976 29.2929 12.7071C27.7087 11.1229 25 12.2449 25 14.4853L25 30C25 30.5523 24.5523 31 24 31C23.4477 31 23 30.5523 23 30L23 14.4853C23 12.2449 20.2913 11.1229 18.7071 12.7071C18.3166 13.0976 17.6834 13.0976 17.2929 12.7071Z" stroke="white" stroke-opacity="0.08"/>
+                    <defs>
+                    <filter id="filter0_i_2427_12057" x="2" y="18" width="40" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="-4" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2427_12057"/>
+                    </filter>
+                    <filter id="filter1_i_2427_12057" x="12.5" y="4.5" width="19" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="-4" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2427_12057"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_2427_12057" x1="6" y1="18" x2="28.1538" y2="51.2308" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FDD819"/>
+                        <stop offset="1" stop-color="#F81717"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_2427_12057" x1="16.5" y1="31.5" x2="39.4245" y2="18.7641" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FDD819"/>
+                        <stop offset="1" stop-color="#F81717"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                </span>
+                <span>Select Image</span>
+            `;
+        input.value = ''; // Reset file input
+        button.style.display = 'none';
+    }
+
+</script>
 
 
 
